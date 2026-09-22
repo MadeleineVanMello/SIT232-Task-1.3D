@@ -1,23 +1,32 @@
-# SIT232 Task 1.3D
+# SIT232 Task 1.3D – Teaching Iterators in C#
 
-This repository contains C# iterator examples demonstrating the use of yield return and IEnumerable.
+This repository accompanies my SIT232 Distinction Task tutorial on iterators in C#.
 
-## Tasks Included
+The tutorial explains:
+- Iterators and `yield return`
+- `IEnumerable<T>` and `IEnumerator<T>`
+- Lazy evaluation and deferred execution
+- LINQ integration
+- Iterator-based state machines
 
-### DaysOfWeek
-A custom collection implementing IEnumerable<string>.
+## Video Tutorial
 
-### EvenSequence
-An iterator method that generates even numbers within a range.
+Watch the tutorial here:
 
-### ReactionGame
-A reaction-time game implemented as an iterator-driven state machine.
+https://youtu.be/Z9oEs3UKqU8
 
-## Concepts Demonstrated
+## Presentation Slides
 
-- IEnumerable
-- IEnumerator
-- yield return
-- Custom iterators
-- State-machine design
-- Stopwatch timing
+The PowerPoint presentation used in the tutorial is included in this repository:
+
+- Iterators in C#.pptx
+
+## Source Code Examples
+
+- DaysOfWeek.cs
+- EvenSequence.cs
+- ReactionGame.cs
+
+## Reflection
+
+Creating this tutorial helped strengthen my understanding of iterators, generic collection interfaces, lazy evaluation, and state-machine design. Explaining these concepts to other students gave me a deeper appreciation of how iterators simplify data traversal while supporting efficient and maintainable code.

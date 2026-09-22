@@ -1,0 +1,47 @@
+In this video, I will introduce and explain the concept of iterators in C#.
+Iterators allow you to produce values one at a time using yield return, improving code cleanliness and efficiency.
+An iterator is a method that pauses and resumes as it generates values.
+It works with IEnumerable and IEnumerator and powers the foreach loop.
+LINQ, or Language Integrated Query, is a C# feature that lets you query and transform data using C# syntax.
+Instead of writing SQL strings, XML queries, or custom loops, LINQ provides a unified approach.
+It gives you a strongly typed, readable way to filter, sort, group, and project data from any data source.
+Iterators are perfect when you don't want to build a full collection and need lazy evaluation.
+They also support deferred execution and custom traversal logic.
+Lazy evaluation means values are not computed until the moment you need them.
+Custom traversal logic means you decide how something should be iterated.
+Rather than relying on the default behaviour, you define your own rules for walking through a collection, object, tree, graph, file, or any data structure.
+Iterators make this incredibly easy.
+When your code reaches yield return, the method pauses and the current state is saved.
+When the next value is requested, execution resumes from where it left off.
+This example iterator walks through a range and yields only even numbers.
+It does not need to build a complete list because each number is produced only when needed.
+As you can see here, it creates an IEnumerable<int> called EvenSequence with parameters first and last.
+It loops from first to last and increments a counter. If n is evenly divisible by two, it prints "yielding n" and then yield returns n.
+In the Main method, EvenSequence is called with the values 1 and 20.
+When the program runs, the first value produced is 2.
+Continuing the iteration prints 4, 6, 8, 10, 12, 14, 16, 18 and finally 20.
+In a second example, the implementation of IEnumerable<T> and the use of yield return make a custom class compatible with foreach loops.
+In this program, a public class inherits from IEnumerable<string> and stores an array containing Monday through Sunday.
+A GetEnumerator method returns an IEnumerator<string>.
+It loops through each day, prints "yielding day", and then yield returns that value.
+The Main method creates a DaysOfWeek object and prints each day.
+When you run the program, the first value produced is Monday.
+Iterators are methods and enumerators are objects.
+The iterator produces the enumerator automatically, and foreach consumes it.
+Asynchronous iterators extend the pattern to asynchronous streams.
+They use IAsyncEnumerable<T>      and are consumed through the use of await foreach.
+This final example is similar to the finite state machine developed in Task 5.3D.
+Each yield return represents a step in the game.
+The iterator becomes a simple state machine, pausing and resuming at each stage. A method called ReactionGame returns an IEnumerable<string> and uses yield return statements to represent each state.
+It calls MeasureReactionTime and displays different messages depending on the result.
+Another method, WaitForKey, allows the user to press any key before proceeding.
+WaitForEnter waits until the Enter key is pressed. RandomDelay generates a random delay between one and three seconds.
+MeasureReactionTime uses a Stopwatch and stops timing once the user presses a key.
+The Main method uses a foreach loop to step through each state of the game.
+After inserting a coin and pressing Enter, the user progresses through the game and records their reaction time.
+Iterators simplify logic while improving performance. They are useful when you need lazy evaluation, custom traversal logic, or cleaner code than manual enumerators.
+In summary, iterators are one of the most elegant and useful features in C#.
+Thank you for watching.
+Iterators are a powerful tool.
+They are simple to write, efficient to run, and perfect for real-world C# development.
+Feel free to contact me via Teams if you have any questions.
